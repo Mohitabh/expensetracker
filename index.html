@@ -30,20 +30,51 @@
 
 	<main>
 
+		<section class="hero animate__animated animate__fadeIn">
+			<h1>The Economix</h1>
+		</section>
+
 		<section class="recent-posts">
-			<h2 class="section-title animate__animated animate__slideInDown">Recent Posts</h2>
-			<div class="articles-grid">
+			<h1 class="page-title animate__animated animate__fadeIn">Recent Posts</h1>
+			<div class="category-filter animate__animated animate__fadeIn">
+				<button class="filter-btn active" data-category="all">All</button>
+				<button class="filter-btn" data-category="markets">Markets</button>
+				<button class="filter-btn" data-category="economics">Economics</button>
+				<button class="filter-btn" data-category="policy">Policy</button>
+				<button class="filter-btn" data-category="tech">Tech</button>
+			</div>
+			<div class="articles-list">
 				<article class="article-card animate__animated animate__fadeIn">
-					<div class="article-date">
-						<span class="day">01</span>
-						<span class="month">June</span>
-					</div>
-					<img> 
+					<img src="https://picsum.photos/800/400" alt="Article image">
 					<div class="article-content">
-	
+						<div class="article-meta">
+							<span><i class="far fa-calendar"></i> June 1, 2024</span>
+							<span><i class="far fa-clock"></i> 5 min read</span>
+						</div>
+						<h2>Breaking News Title</h2>
+						<p class="article-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<a href="#" class="read-more">
+							Read More 
+							<i class="fas fa-arrow-right"></i>
+						</a>
 					</div>
 				</article>
-				<!-- Add more articles with the same structure -->
+
+				<article class="article-card animate__animated animate__fadeIn">
+					<img src="https://picsum.photos/800/401" alt="Article image">
+					<div class="article-content">
+						<div class="article-meta">
+							<span><i class="far fa-calendar"></i> June 1, 2024</span>
+							<span><i class="far fa-clock"></i> 4 min read</span>
+						</div>
+						<h2>Technology Update</h2>
+						<p class="article-excerpt">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<a href="#" class="read-more">
+							Read More 
+							<i class="fas fa-arrow-right"></i>
+						</a>
+					</div>
+				</article>
 			</div>
 		</section>
 	</main>
@@ -52,5 +83,10 @@
 	</footer>
 
 	<script src="script.js"></script>
+
+	<button id="backToTop" class="back-to-top">
+		<i class="fas fa-arrow-up"></i>
+	</button>
+
 </body>
 </html>

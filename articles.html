@@ -33,9 +33,19 @@
     </header>
 
     <main>
-        <h1 class="animate__animated animate__fadeIn">Latest Articles</h1>
+        <section class="hero animate__animated animate__fadeIn">
+            <h1>Latest Articles</h1>
+        </section>
+        
+        <div class="category-filter animate__animated animate__fadeIn">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="markets">Markets</button>
+            <button class="filter-btn" data-category="economics">Economics</button>
+            <button class="filter-btn" data-category="policy">Policy</button>
+            <button class="filter-btn" data-category="tech">Tech</button>
+        </div>
 
-        <section class="articles-list">
+        <div class="articles-list">
             <article class="article-card animate__animated animate__fadeIn">
                 <img src="https://picsum.photos/800/400" alt="Article image">
                 <div class="article-content">
@@ -55,12 +65,8 @@
                     <a href="#" class="read-more">Read More</a>
                 </div>
             </article>
-        </section>
+        </div>
     </main>
-
-    <footer>
-        <p>&copy; 2024 The Economix. All rights reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
