@@ -98,4 +98,33 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+});
+
+// Add this new function
+document.addEventListener('DOMContentLoaded', () => {
+    const logos = document.querySelectorAll('.logo-text');
+    
+    const symbols = ['$', '€', '£', '¥', '₿', '₹', '₽'];
+    
+    logos.forEach(logo => {
+        const text = logo.dataset.value;
+        let iterations = 0;
+        
+        const interval = setInterval(() => {
+            logo.innerText = logo.innerText.split('')
+                .map((letter, index) => {
+                    if(index < iterations) {
+                        return text[index];
+                    }
+                    return symbols[Math.floor(Math.random() * symbols.length)];
+                })
+                .join('');
+            
+            if(iterations >= text.length) {
+                clearInterval(interval);
+            }
+            
+            iterations += 1/4;
+        }, 45);
+    });
 }); 
