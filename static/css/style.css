@@ -1,10 +1,12 @@
+/* ---------- GLOBAL ---------- */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: black;
+    color: #e3e3e3;
 }
 
 html {
@@ -20,27 +22,29 @@ ul, ol {
     margin: auto;
     overflow: hidden;
     padding: 20px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #000000;
+    border-radius: 8px;
+    border: 1px solid #1abc9c33;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
     margin-top: 30px;
-    border-radius: 5px;
 }
 
+/* ---------- HEADER ---------- */
+
 header {
-    /* background: #35424a; */
-    background: linear-gradient(45deg, #35424a, #222);
+    background: black;
     color: #ffffff;
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: #e8491d 3px solid;
+    border-bottom: #1abc9c 3px solid;
 }
 
 header a {
-    color: #000000;
-    text-decoration:none;
+    color: #1abc9c;
+    text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header ul {
@@ -53,7 +57,7 @@ header ul {
 header li {
     float: left;
     display: inline;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
 }
 
 header #branding {
@@ -69,126 +73,115 @@ header nav {
     margin-top: 10px;
 }
 
-header .highlight, header .current a {
-    color: #e8491d;
+header .highlight,
+header .current a {
+    color: #1abc9c;
     font-weight: bold;
 }
 
 header a:hover {
-    color: #cccccc;
+    color: #11e6c1;
     font-weight: bold;
 }
+
+/* ---------- BUTTONS ---------- */
 
 .btn {
     display: inline-block;
-    background: #e8491d;
+    background: #1abc9c;
     color: #fff;
     padding: 10px 20px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
     font-size: 15px;
     margin: 5px 0;
-    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, background 0.3s;
 }
 
 .btn:hover {
-    background: #35424a;
+    background: #000000;
     transform: translateY(-10px);
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(10px);
+.btn.secondary {
+    background-color: #6c757d;
+}
+
+/* ---------- CARDS ---------- */
+
+.card,
+.stat-card,
+.category-card,
+.category-section,
+.balance-card {
+    background: #111111;
+    color: #e5e5e5;
     border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #1abc9c33;
     padding: 20px;
     margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease-in-out;
 }
 
-.card:hover {
+.card:hover,
+.stat-card:hover,
+.category-card:hover {
     transform: translateY(-10px);
 }
 
-.form-group {
-    margin-bottom: 15px;
+.stat-card h3 {
+    margin-top: 0;
+    color: #1abc9c;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
+.stat-card p {
+    font-size: 24px;
     font-weight: bold;
+    color: #1abc9c;
 }
 
-.form-group input, .form-group select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
+/* ---------- STATS & BALANCE ---------- */
 
-.stats-container {
+.stats-container,
+.category-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 20px 0;
 }
 
-.stat-card {
-    flex: 1;
-    min-width: 200px;
-    margin: 0 10px;
-    text-align: center;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
 .balance-container {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    /* height: 60vh;  */
 }
 
-.balance-card {
-    flex: 0 0 auto; /* Override the flex properties from your original CSS */
-    max-width: 250px;
-    min-width: 200px;
-    text-align: center;
-    padding: 30px; /* Increased padding for better visual balance */
-    background: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.positive {
+    color: #1abc9c;
 }
 
-.stat-card h3 {
-    margin-top: 0;
-    color: #35424a;
+.negative {
+    color: #ff4c4c;
 }
 
-.stat-card p {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e8491d;
-}
+/* ---------- ADVICE ---------- */
 
 .advice {
-    background: #f0f8ff;
-    border-left: 5px solid #35424a;
+    background: #0f1f1f;
+    border-left: 5px solid #1abc9c;
     padding: 15px;
     margin: 20px 0;
+    color: #d8fdf7;
 }
 
+/* ---------- GRAPH ---------- */
+
 .graph-container {
-    background: white;
+    background: #000000;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #1abc9c33;
     margin: 20px 0;
     min-height: 400px;
     display: flex;
@@ -202,74 +195,12 @@ header a:hover {
 }
 
 .no-data {
-    color: #666;
+    color: #888;
     font-style: italic;
     text-align: center;
 }
-.negative {
-    color: #e8491d;
-}
 
-.positive {
-    color: #2ecc71;
-}
-
-.flash {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-}
-
-.flash.success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.flash.error {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-.category-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
-.category-card {
-    flex: 1;
-    min-width: 200px;
-    margin: 0 10px;
-    text-align: center;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.category-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 0 10px;
-    text-align: center;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 40px; /* adjust as needed */
-}
-
-.profile-form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+/* ---------- FORMS ---------- */
 
 .form-group {
     margin-bottom: 15px;
@@ -286,38 +217,54 @@ header a:hover {
 .form-group select {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #1abc9c55;
+    background: #0f0f0f;
+    color: #e5e5e5;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-input:focus {
+input:focus,
+textarea:focus,
+select:focus {
     outline: none;
-    border-color: #e8491d;
-    box-shadow: 0 0 5px #e8491d44;
-  }
-  
-.form-group textarea {
-    height: 100px;
-    resize: vertical;
+    border-color: #1abc9c;
+    box-shadow: 0 0 5px #1abc9c66;
 }
 
-.btn.secondary {
-    background-color: #6c757d;
-    margin-left: 10px;
+.profile-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #111111;
+    border-radius: 5px;
+    border: 1px solid #1abc9c33;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+/* ---------- FLASH MESSAGES ---------- */
+
+.flash {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
 }
+
+.flash.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* ---------- PROFILE BUTTON ---------- */
 
 .profile-btn {
-    margin-left: auto; /* Pushes the button to the right */
+    margin-left: auto;
     padding: 8px 16px;
-    background-color: #4a6fa5;
+    background-color: #1abc9c;
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -325,35 +272,35 @@ input:focus {
 }
 
 .profile-btn:hover {
-    background-color: #3a5a8f;
+    background-color: #11e6c1;
 }
 
-/* scrollbar */
+/* ---------- SCROLLBAR ---------- */
+
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #e8491d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1abc9c;
     border-radius: 5px;
-  }
-  
-/* responsive */
+}
+
+/* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 768px) {
     .container {
         width: 95%;
         padding: 10px;
     }
-    
-    /* Flex container adjustments */
+
     .stats-container,
     .category-container,
     .header-container {
         flex-direction: column;
-        align-items: stretch; /* Changed from center to stretch for better full-width behavior */
+        align-items: stretch;
     }
-    
-    /* Card adjustments */
+
     .stat-card,
     .category-card,
     .category-section,
@@ -361,50 +308,27 @@ input:focus {
         margin: 10px 0;
         width: 100%;
         max-width: 100%;
-        box-sizing: border-box; /* Ensures padding is included in width */
     }
-    
-    /* Navigation adjustments */
+
     header nav,
     header ul {
         float: none;
-        text-align: left; /* Changed from center to left for better hierarchy */
         width: 100%;
+        text-align: left;
     }
-    
+
     header li {
         display: block;
         padding: 10px 0;
         width: 100%;
     }
-    
-    /* Profile button */
+
     .profile-btn {
         width: 100%;
-        text-align: center;
         margin: 10px 0;
+        text-align: center;
     }
-    
-    /* Nav links specific styling */
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        width: 100%;
-    }
-    
-    .nav-links a {
-        display: block;
-        width: 100%;
-        padding: 10px 0; /* Added padding for better touch targets */
-    }
-    
-    /* Added for better mobile interaction */
-    .nav-links li:hover {
-        background-color: rgba(0,0,0,0.05); /* Visual feedback for touch */
-    }
-    
-    /* Ensure no horizontal scrolling */
+
     html, body {
         overflow-x: hidden;
         width: 100%;
